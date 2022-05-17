@@ -20,9 +20,18 @@ Table of Content
 */
 
 /* Common css start */
-/* :root{} */
+:root{
+    --primary-c: #1B1B1B ;
+    --hightlight-c: #68DECD ;
+    --seceond-primary-c : #518F8C ;
+    --line-c : #585D65 ;
+    --third-color : #252525 ;
+    --white-c : #fff ;
+    --font-pridi : 'Pridi', serif;
+    --font-w7 : 700 ;
+}
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 h1,h2,h3,h4,h5,h6,
 p,
@@ -37,14 +46,78 @@ a,a:hover{
 ul,ol{
     list-style: none;
 }
+.active{
+    color: var(--seceond-primary-c) !important;
+}
 /* Common css end */
 
 
 
 /* home banner section start */
 #home_banner{
-    background: #1B1B1B;
+    background: url(../images/banner.jpg) no-repeat #1B1B1B;
+    background-position: center;
+    background-size: cover;
     height: 100vh;
     width: 100%;
+    color: var(--white-c);
+    position: relative;
+}
+#home_banner::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: rgba(27, 27, 27, 0.5);
+    z-index: -1;
+
+}
+#home_banner #menu {
+    background-color: var(--third-color);
+    position: relative;
+    top: 40px;
+    left: 0;
+    border-radius: 30px;
+    /* background-color: transparent; */
+}
+#home_banner #menu .logo{
+    color: var(--white-c);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#home_banner #mainnav ul{
+    margin-right: 40px;
+}
+#home_banner #mainnav ul li{
+    margin-right: 12px;
+}
+#home_banner #mainnav ul li a{
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    transition: all .3s linear;
+}
+#home_banner #mainnav ul li:hover a{
+    color: var(--seceond-primary-c);
+}
+#home_banner #menu .cvbtn a {
+    text-transform: capitalize;
+    padding: 0 14px;
+    color: #fff;
+}
+#home_banner #menu .cvbtn a span{
+    text-transform: uppercase;
+}
+#home_banner #menu .cvbtn a i{
+    font-size: 14px;
+    margin-left: 5px;
+}
+#home_banner .container{
+    height: 100%;
+}
+#home_banner .banner_content{
+    margin-top: 50px;
 }
 /* home banner section end */
